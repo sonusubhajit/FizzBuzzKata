@@ -3,6 +3,10 @@ package com.agilekatas.fizzbuzzclasses;
 public class FizzBuzz_Features {
 
 	public String getfizzbuzzresult(int number) {
-		return String.valueOf(number);
+		if (number % 3 == 0) {
+			return "fizz";
+		} else {
+			return String.valueOf(number);
+		}
 	}
 }
