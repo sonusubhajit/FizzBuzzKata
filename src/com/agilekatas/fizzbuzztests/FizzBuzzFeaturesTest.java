@@ -97,7 +97,7 @@ public class FizzBuzzFeaturesTest {
 	}
 
 	@Test
-	public void test_Feature_3_UsingaCustomSubstitution() {
+	public void testFeatureThreeUsingaCustomSubstitution() {
 		int[] numbers = { 1, 2, 8 };
 		for (int i = 0; i < numbers.length; i++) {
 			String actualresult = fizzbuzzfeature.getcustomsubstitutionresult(numbers[i]);
@@ -107,6 +107,24 @@ public class FizzBuzzFeaturesTest {
 			} else {
 				String expectedresult1 = String.valueOf(numbers[i]);
 				assertEquals(expectedresult1, actualresult);
+			}
+		}
+	}
+
+	@Test
+	public void testFeaturThreeeLinkingCustomSubstitutionsTogether() {
+		int[] numbers = { 4, 9, 12 };
+		for (int i = 0; i < numbers.length; i++) {
+			String actualresult = fizzbuzzfeature.getcustomsubstitutionresult(numbers[i]);
+			String expectedresult = "fuzz";
+			if (numbers[i] == 4) {
+				assertEquals(expectedresult, actualresult);
+			} else if (numbers[i] == 9) {
+				String expectedresult1 = "bizz";
+				assertEquals(expectedresult1, actualresult);
+			} else if (numbers[i] == 12) {
+				String expectedresult2 = "fuzz bizz";
+				assertEquals(expectedresult2, actualresult);
 			}
 		}
 	}

@@ -3,8 +3,15 @@ package com.agilekatas.fizzbuzzclasses;
 public class FizzBuzzFeatures {
 
 	public String getcustomsubstitutionresult(int number) {
+
+		if (number % 2 == 0 && number % 3 == 0) {
+			return "fuzz bizz";
+		}
 		if (number % 2 == 0) {
 			return "fuzz";
+		}
+		if (number % 3 == 0) {
+			return "bizz";
 		} else {
 			return String.valueOf(number);
 		}
