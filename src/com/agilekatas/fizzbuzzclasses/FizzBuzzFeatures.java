@@ -1,8 +1,16 @@
 package com.agilekatas.fizzbuzzclasses;
 
-public class FizzBuzz_Features {
+public class FizzBuzzFeatures {
 
-	public String getfizzbuzzresult(int number) {
+	public String getcustomsubstitutionresult(int number) {
+		if (number % 2 == 0) {
+			return "fuzz";
+		} else {
+			return String.valueOf(number);
+		}
+	}
+
+	public String getfizzbuzzpopresult(int number) {
 		if (number % 3 == 0 && number % 5 == 0 && number % 7 == 0) {
 			return "fizz buzz pop";
 		} else if (number % 3 == 0 && number % 5 == 0) {
@@ -11,8 +19,6 @@ public class FizzBuzz_Features {
 			return "fizz pop";
 		} else if (number % 5 == 0 && number % 7 == 0) {
 			return "buzz pop";
-		} else if (number % 2 == 0) {
-			return "fuzz";
 		} else if (number % 3 == 0) {
 			return "fizz";
 		} else if (number % 5 == 0) {
